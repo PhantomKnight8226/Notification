@@ -16,6 +16,18 @@ local function Debug(...)
     end
 end
 
+local function CheckAd()
+	if getgenv then
+		if not getgenv()["IrisAd"] then
+		end
+	else
+		if not _G["IrisAd"] then
+			_G["IrisAd"] = true;
+		end
+	end
+	wait()
+end
+
 local function CreateNormalNotificationArguments()
 	local ArgFour = {
 		Duration = 4,
